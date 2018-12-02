@@ -19,14 +19,33 @@ class Getdoc:
         return names
 
 
-        
-           
+class Window(Getdoc):
+    def __init__(self):
+        root = Tk()
+        root.geometry('200x200')
+        f = Frame(root)
+        f.pack()
+        var = StringVar()
+        values = self.listdocs()
+        omenu = OptionMenu(f, var, *values, command=self.output)
+        omenu.pack()
+        self.text = Text(f)
+        self.text.pack()
+
+    def output(self, value):
+        self.text.delete(1.0, END)
+        g = Getdoc(value)
+        text = g.printdoc()
+        self.text.insert(1.0, text)
+
+
+          
 
         
 
 if __name__ == '__main__':
-    g = Getdoc('django')
-    print (g.listdocs())
+    Window()
+    mainloop()
 
 
 
