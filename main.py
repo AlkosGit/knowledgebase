@@ -41,10 +41,6 @@ class Window(Getdoc):
         self.text.insert(1.0, text)
 
 
-          
-
-        
-
 if __name__ == '__main__':
     Window()
     mainloop()
