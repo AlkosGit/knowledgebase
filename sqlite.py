@@ -1,0 +1,53 @@
+# file: sqlite.py
+from listprops import ListProps
+
+class Doc(ListProps):
+    """
+    Create/Open database:
+    
+    sqlite3.connect(database [,timeout ,other optional arguments])
+
+    This API opens a connection to the SQLite database file. 
+        You can use ":memory:" to open a database connection to a database that resides in RAM instead of on disk. 
+        If database is opened successfully, it returns a connection object.
+
+        When a database is accessed by multiple connections, and one of the processes modifies the database, 
+        the SQLite database is locked until that transaction is committed. 
+        The timeout parameter specifies how long the connection should wait for the lock to go away until raising an exception. 
+        The default for the timeout parameter is 5.0 (five seconds).
+
+        If the given database name does not exist then this call will create the database. 
+        You can specify filename with the required path as well if you want to create a database anywhere else except in the current directory.
+
+    Create cursor:
+    connection.cursor([cursorClass])
+
+    This routine creates a cursor which will be used throughout of your database programming with Python. 
+        This method accepts a single optional parameter cursorClass. 
+        If supplied, this must be a custom cursor class that extends sqlite3.Cursor.
+
+    Execute SQL query:
+    cursor.execute(sql [, optional parameters])
+
+    This routine executes an SQL statement. 
+        The SQL statement may be parameterized (i. e. placeholders instead of SQL literals). 
+        The sqlite3 module supports two kinds of placeholders: question marks and named placeholders (named style).
+
+        For example − cursor.execute("insert into people values (?, ?)", (who, age))
+
+    Save data:
+    connection.commit()
+
+    This method commits the current transaction. 
+        If you don't call this method, anything you did since the last call to commit() is not visible from other database connections.
+    
+    Close database connection:
+    connection.close()
+    
+    Example:
+        connection = sqlite3.connect('dbname')
+        cursor = connection.cursor
+        cursor.execute('<sql_query>'>)
+        connection.commit()
+        connection.close()
+    """
