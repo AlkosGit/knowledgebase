@@ -15,8 +15,8 @@ class Getdoc:
         names = []
         for name in glob.glob('*.py'):
             if not 'main' in name and not 'listprops' in name:
-                names.append(name.rstrip('.py')) # remove file extension
-        return names
+                names.append(name.rstrip('.py').lower()) # remove file extension
+        return sorted (names)
 
 class Window(Getdoc):
     def __init__(self):
