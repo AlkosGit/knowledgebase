@@ -1,5 +1,6 @@
 from os import popen
 from tkinter import *
+import glob
 
 class Getdoc:
     def __init__(self, module):
@@ -11,13 +12,11 @@ class Getdoc:
         return instance
 
     def listdocs(self):
-        files = popen('ls *.py').read().splitlines() # remove trailing '\n'
         names = []
-        for name in files:
+        for name in glob.glob('*.py'):
             if not 'main' in name and not 'listprops' in name:
                 names.append(name.rstrip('.py')) # remove file extension
         return names
-
 
 class Window(Getdoc):
     def __init__(self):
