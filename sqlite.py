@@ -50,4 +50,27 @@ class Doc(ListProps):
         cursor.execute('<sql_query>'>)
         connection.commit()
         connection.close()
+        
+    #################################################################################################
+    Sqlite interactive commands:
+
+    Open interactive console:
+    $ sqlite3
+
+    Create new table with two columns:
+    sqlite> .open database.db
+    sqlite> create table <name> (column1 varchar(64) PRIMARY KEY, column2 varchar(64);
+
+    Insert data into columns:
+    sqlite> insert into <tablename> ('column1', 'column2') values ('value1', 'value2');
+
+    Update data in columns:
+    sqlite> update <tablename> set column1='newdata', column2='newdata' where id=<id>;
+
+    Add column to table:
+    sqlite> alter table <tablename> add column column3 varchar(64);
+
+    Delete row:
+    sqlite> delete from <tablename> where id=<id>;
+
     """
