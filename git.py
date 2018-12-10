@@ -44,4 +44,10 @@ class Doc(ListProps):
         To resume tracking:
             $ git update-index --no-assume-unchanged <file>
 
+
+    Force local repository to synchronize with on-online master:
+        Warning: this will remove local files not in master.
+            $ git fetch --all
+            $ git reset --hard origin/master
+
     """
