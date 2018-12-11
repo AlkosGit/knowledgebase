@@ -1,0 +1,40 @@
+Install python extension to vim:
+	# dnf install python3-jedi vim-jedi
+
+	Vim keys:
+		:sp <filename> - split screen with second file (vertically)
+		:vs <filename> - split screen with second file (horizontally)
+		/ <string> - search for <string> in current file
+		n - find next <string>
+
+	Find and replace:
+		- find each occurence of 'foo' and replace with 'bar'
+		:%s/foo/bar/g
+
+		- curent line only
+		:s/foo/bar/g
+
+		- whole word exactly matching 'foo'
+		:%s/\<foo\>/bar/g
+
+	Cut/copy and paste:
+	Use y to copy, d to cut and p/P to paste.
+		- copy single word from cursor
+		yw
+		- cut single word
+		dw
+		
+		- copy current word
+		yiw
+
+		- copy whole line
+		yy
+		- cut whole line
+		dd
+
+		- selection
+		v +cursor
+			or
+		V to select whole line(s)
+
+  
