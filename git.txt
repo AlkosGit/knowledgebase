@@ -1,8 +1,3 @@
-# file: git.py
-from listprops import ListProps
-
-class Doc(ListProps):
-    """
     Create new repository:
     Log in to github.com and create a new repository.
         Initialize local repository:
@@ -50,4 +45,3 @@ class Doc(ListProps):
             $ git fetch --all
             $ git reset --hard origin/master
 
-    """

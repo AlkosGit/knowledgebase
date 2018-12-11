@@ -1,6 +1,5 @@
 Install and configure Apache webserver to serve content created with Django.
 
-
 	Installation (Fedora):
 		# dnf install httpd python3-mod_wsgi
 
@@ -22,3 +21,11 @@ Install and configure Apache webserver to serve content created with Django.
     	WSGIDaemonProcess printermanagement python-path=/opt/printermanagement:/opt/printermanagement/lib/python3.7/site-packages
     	WSGIProcessGroup printermanagement
     	WSGIScriptAlias / /opt/printermanagement/printmgmt/wsgi.py
+
+
+
+
+
+
+
+
