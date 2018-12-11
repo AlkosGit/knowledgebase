@@ -22,7 +22,7 @@ class Getdoc:
         names = []
         for name in glob.glob('*.txt'):
             if not 'main' in name:
-                names.append(name.rstrip('.txt').lower()) # remove file extension
+                names.append(name[:-4].lower()) # remove file extension
         return sorted (names)
 
     def savedoc(self, textstring):
