@@ -67,6 +67,14 @@
 
     Delete row:
     sqlite> delete from <tablename> where id=<id>;
+    
+    List tables in database:
+    sqlite> .table
+
+    List columns in table:
+    sqlite> pragma table_info(<tablename>)    
+
+
 
 
 
