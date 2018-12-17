@@ -54,7 +54,7 @@
 
     Create new table with two columns:
     sqlite> .open database.db
-    sqlite> create table <name> (id INTEGER PRIMARY KEY, column2 varchar(64);
+    sqlite> create table <name> (id INTEGER PRIMARY KEY, column2 varchar(64));
 
     Insert data into columns:
     sqlite> insert into <tablename> ('column1', 'column2') values ('value1', 'value2');
@@ -67,6 +67,7 @@
 
     Delete row:
     sqlite> delete from <tablename> where id=<id>;
+
 
 
 
