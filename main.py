@@ -32,7 +32,7 @@ class Getdoc:
 
 class Window(Getdoc):
     def __init__(self):
-        self.root = Tk()
+        self.root = Tk(className='kb')
         self.root.geometry('600x500')
         self.root.title('Docstring Reader')
         #  Initialize frames.

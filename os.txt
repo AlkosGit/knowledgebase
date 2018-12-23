@@ -1,0 +1,20 @@
+To correctly deploy a Python application on Linux with Gnome/KDE, a .desktop file needs to be created.
+	Also, to get rid of the standard Tk icon extra code is required.
+
+	Create desktop file in ~/.local/share/applications:
+		[Desktop Entry]
+		Version=1.0
+		Name=Playlist Manager
+		GenericName=Playlist Manager
+		Exec=/usr/bin/python3 /home/alkos/Sources/playlistmanager/main.py %u
+		Path=/home/alkos/Sources/playlistmanager/
+		Terminal=false
+		Icon=mpv
+		Type=Application
+		StartupNotify=true
+		StartupWMClass=playlistmanager
+
+	The 'StartupWMClass' needs to be present in Python/Tkinter code:
+		root = Tk(className='playlistmanager')
+
+
